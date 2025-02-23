@@ -1,7 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waddle Waypoint</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #c3e6cd;
+        }
+        h1 {
+            color: #2c5e1a;
+        }
+        .clue {
+            font-size: 1.2em;
+            margin: 20px;
+            padding: 15px;
+            background: #fff8c6;
+            display: inline-block;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+        }
+        .duck {
+            width: 150px;
+        }
+        .final-location {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-top: 20px;
+            display: none;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            background-color: #ffcc00;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        function revealFinal() {
+            document.getElementById("final-coordinates").style.display = "block";
+        }
+    </script>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <h1>Welcome to Waddle Waypoint!</h1>
+    <p>You've waddled your way here, but the journey isn't over yet.</p>
+    
+    <div class="clue">The path ahead is electric, but don't let that shock you! Take a few steps beyond where your journey began, and let your feet find the hidden passage where rainwater runs away. The treasure awaits beneath the metal bars—just mind your feathers!</div>
+    
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Duck_at_a_pond.jpg" alt="A cute duck" class="duck">
+    
+    <br>
+    <button onclick="revealFinal()">Reveal Final Location</button>
+    
+    <div id="final-coordinates" class="final-location">Final Coordinates: N 12° 34.567 W 98° 76.543</div>
 </body>
 </html>
